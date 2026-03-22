@@ -1,0 +1,15 @@
+export interface VoteRequest {
+    stallId: number;
+    rating: number;
+}
+
+export interface VoteResponse {
+    success: boolean;
+    message: string;
+    progress?: number;
+}
+
+export interface UserProgress {
+    count: number;
+    isCompleted: boolean;
+}
