@@ -3,10 +3,14 @@ import type { AppEnv } from '../types'
 import { fetchProgress } from '../services/progress.Service'
 
 export const getProgress = async (c: Context<AppEnv>) => {
-  const userId = c.get('userId')
-  
+  const userId = c.req.param('userId')
+
+  if (!userId) {
+    return c.json({ success: false, message: 'userId is required' }, 400)
+  }
+
   try {
-    const data = await fetchProgress(c.env, userId)
+    const data = await fetchProgress(c.env.DB, userId)
     return c.json(data)
   } catch (e: any) {
     console.error('Progress error:', e)

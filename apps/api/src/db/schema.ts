@@ -1,25 +1,26 @@
 import { sqliteTable, text, integer, uniqueIndex } from 'drizzle-orm/sqlite-core';
 
 export const users = sqliteTable('users', {
-  id: text('id').primaryKey(), // Clerk ID
+  id: text('id').primaryKey(),
+  email: text('email').unique(),
   name: text('name'),
-  email: text('email'),
-  isCompleted: integer('is_completed', { mode: 'boolean' }).default(false),
+  completed: integer('completed', { mode: 'boolean' }).default(false),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-  
 });
 
 export const stalls = sqliteTable('stalls', {
   id: integer('id').primaryKey({ autoIncrement: true }),
-  name: text('name'),
-  qrSlug: text('qr_slug').unique(),
+  name: text('name').notNull(),
+  description: text('description'),
+  logo: text('logo'),
+  qrSlug: text('qr_slug').unique().notNull(), // ✅ clean unique
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
 
 export const ratings = sqliteTable('ratings', {
   id: integer('id').primaryKey({ autoIncrement: true }),
-  userId: text('user_id').references(() => users.id),
-  stallId: integer('stall_id').references(() => stalls.id),
+  userId: text('user_id').notNull().references(() => users.id),
+  stallId: integer('stall_id').notNull().references(() => stalls.id),
   rating: integer('rating').notNull(),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 }, (table) => ({
