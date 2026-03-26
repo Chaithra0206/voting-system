@@ -35,7 +35,7 @@ export const submitVote = async (
 
     const progressCount = countResult[0]?.count || 1
 
-    if (progressCount >= 10) {
+    if (progressCount >= 12) {
       await ormDb
         .update(users)
         .set({ completed: true })

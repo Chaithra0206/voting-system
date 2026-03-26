@@ -23,7 +23,7 @@ resultsRoutes.get('/', async (c) => {
             .select({ userId: ratings.userId })
             .from(ratings)
             .groupBy(ratings.userId)
-            .having(gte(count(ratings.userId), 10))
+            .having(gte(count(ratings.userId), 12))
         )
       )
       .groupBy(ratings.stallId);
