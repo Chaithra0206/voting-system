@@ -28,6 +28,8 @@ export const ratings = sqliteTable('ratings', {
   stallId: integer('stall_id').notNull().references(() => stalls.id),
   rating: integer('rating').notNull(),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
-}, (table) => ({
-  unq: uniqueIndex('unique_vote').on(table.userId, table.stallId),
-}));
+},
+//  (table) => ({
+//   unq: uniqueIndex('unique_vote').on(table.userId, table.stallId),
+// })
+);
