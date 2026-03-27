@@ -11,35 +11,20 @@ export default function LoginScreen({ onStart }: LoginScreenProps) {
       className="h-[100dvh] relative select-none overflow-hidden flex flex-col bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/bg.webp')" }}
     >
-      {/* ── TOP LOGOS ── */}
-      <div className="absolute -top-4 left-5 right-5 flex items-center justify-between z-20 pointer-events-none">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="w-24 sm:w-32 md:w-36 drop-shadow-lg pointer-events-auto"
-        >
+      <div className="absolute top-4 left-6 sm:left-8 pointer-events-none z-30">
           <img
             src="/Nitte_logo.webp"
             alt="Nitte"
-            className="w-full h-auto object-contain"
+            className="h-10 sm:h-12 w-auto object-contain"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="w-24 sm:w-32 md:w-36 drop-shadow-lg pointer-events-auto"
-        >
+        <div className="absolute top-0 right-0 pointer-events-none z-30 opacity-90">
           <img
             src="/Fiza_logo.webp"
             alt="Fiza"
-            className="w-full h-auto object-contain"
-          />
-        </motion.div>
-      </div>
-
+            className="h-60 sm:h-80 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] translate-x-4 -translate-y-24 sm:translate-x-8 sm:-translate-y-28" />
+        </div>
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
 
         {/* ── LOGO ── */}

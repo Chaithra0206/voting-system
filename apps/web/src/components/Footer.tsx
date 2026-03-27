@@ -28,15 +28,13 @@ export default function Footer({
             href="https://dk24.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+            className="flex items-center justify-center gap-1.5 hover:opacity-80 transition-opacity mt-auto"
           >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 overflow-hidden">
-              <img
-                src="/dk24.webp"
-                alt="DK24"
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <img
+              src="/Consortium Logo.svg"
+              alt="DK24"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </a>
         </div>
 

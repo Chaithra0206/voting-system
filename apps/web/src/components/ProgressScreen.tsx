@@ -55,7 +55,7 @@ export default function ProgressScreen({
           <img
             src="/Fiza_logo.webp"
             alt="Fiza"
-            className="h-60 sm:h-80 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] translate-x-2 -translate-y-24 sm:translate-x-4 sm:-translate-y-28"
+            className="h-60 sm:h-80 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] translate-x-4 -translate-y-24 sm:translate-x-8 sm:-translate-y-28"
           />
         </div>
 
@@ -171,13 +171,11 @@ export default function ProgressScreen({
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 shrink-0 overflow-hidden">
-                    <img
-                      src="/dk24.webp"
+                   <img
+                      src="/Consortium Logo.svg"
                       alt="DK24"
-                      className="w-full h-full object-contain scale-110"
+                      className="h-15 sm:h-15 w-auto object-contain"
                     />
-                  </div>
                 </a>
               </div>
 
