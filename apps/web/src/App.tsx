@@ -343,8 +343,6 @@ export default function App() {
         {currentScreen === 'rating' && currentStallData && (
           <RatingScreen
             stallData={currentStallData}
-            onBack={() => setCurrentScreen('scanner')}
-            onProgress={() => setCurrentScreen('progress')}
             onSubmitSuccess={handleRatingSubmit}
             ratedCount={serverProgress}
             totalCount={totalStalls}
