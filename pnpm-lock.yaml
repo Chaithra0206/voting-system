@@ -46,6 +46,12 @@ importers:
         specifier: ^3.0.0
         version: 3.114.17(@cloudflare/workers-types@4.20260317.1)
 
+  apps/clerk-proxy:
+    devDependencies:
+      wrangler:
+        specifier: ^3.0.0
+        version: 3.114.17(@cloudflare/workers-types@4.20260317.1)
+
   apps/web:
     dependencies:
       '@clerk/react':
