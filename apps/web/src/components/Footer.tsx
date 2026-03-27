@@ -50,19 +50,19 @@ export default function Footer({
             {[
               {
                 id: 1,
-                src: "/cosc.webp",
+                src: "/cosc.png",
                 alt: "COSC",
                 url: "https://www.linkedin.com/company/canara-students-open-source-community/",
               },
               {
                 id: 2,
-                src: "/sosc.webp",
+                src: "/sosc.png",
                 alt: "SOSC",
                 url: "https://sosc.org.in/",
               },
               {
                 id: 3,
-                src: "/sceptix.webp",
+                src: "/sceptix.png",
                 alt: "Sceptix",
                 url: "https://www.sceptix.in/",
               },
